@@ -7,7 +7,7 @@ Windows のアプリ別メモリ使用量を、株価マップ風のヒートマ
 
 ## ダウンロード
 
-**v1.2.7 / Windows 11 x64 / MemoryHeatmapR に改名・プレビュー版**
+**v1.2.7 / Windows 11 x64**
 
 - [MemoryHeatmapR-v1.2.7.zip](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.7/MemoryHeatmapR-v1.2.7.zip)
 - [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.7/MemoryHeatmapR-v1.2.7.zip.sha256.txt)
@@ -67,7 +67,7 @@ GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内�
 
 ## 更新履歴
 
-- [v1.2.7 — MemoryHeatmapR に改名](release-notes/v1.2.7.md)
+- [v1.2.7](release-notes/v1.2.7.md)
 
 - [v1.2.6 — タイトルバーとアプリヘッダーを統合](release-notes/v1.2.6.md)
 
