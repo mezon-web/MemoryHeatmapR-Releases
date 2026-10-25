@@ -1,23 +1,23 @@
-# MemoryHeatmap
+# MemoryHeatmapR
 
 Windows のアプリ別メモリ使用量を、株価マップ風のヒートマップで表示するツールです。
 四角の面積が専用 RAM 使用量、赤・緑の色が約 10 秒前からの増減を示します。
 
-![MemoryHeatmap の画面例（架空データ）](images/overview.png)
+![MemoryHeatmapR の画面例（架空データ）](images/overview.png)
 
 ## ダウンロード
 
-**v1.2.6 / Windows 11 x64 / タイトルバーとアプリヘッダーを統合・プレビュー版**
+**v1.2.7 / Windows 11 x64 / MemoryHeatmapR に改名・プレビュー版**
 
-- [MemoryHeatmap-v1.2.6.zip](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.6/MemoryHeatmap-v1.2.6.zip)
-- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.6/MemoryHeatmap-v1.2.6.zip.sha256.txt)
-- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/download/v1.2.6/MemoryHeatmap-v1.2.6-manual.html)
-- [リリースページ](https://github.com/mezon-web/MemoryHeatmap-Releases/releases/tag/v1.2.6)
+- [MemoryHeatmapR-v1.2.7.zip](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.7/MemoryHeatmapR-v1.2.7.zip)
+- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.7/MemoryHeatmapR-v1.2.7.zip.sha256.txt)
+- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.7/MemoryHeatmapR-v1.2.7-manual.html)
+- [リリースページ](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/tag/v1.2.7)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
 未導入の場合は [Microsoft の .NET 10 配布ページ](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)から「.NET Desktop Runtime」の Windows x64 を導入してください。
 
-ZIP を展開し、`MemoryHeatmap-v1.2.6` フォルダ内の `MemoryHeatmap.exe` をダブルクリックすると起動します。インストール・管理者権限は不要です。
+ZIP を展開し、`MemoryHeatmapR-v1.2.7` フォルダ内の `MemoryHeatmapR.exe` をダブルクリックすると起動します。インストール・管理者権限は不要です。
 EXE は単独で移動できます。Windows 11 22H2 の 2023 年 9 月更新以降が対象です。
 
 ## できること
@@ -45,7 +45,7 @@ OS・共有メモリなどを含む PC 全体の使用量とは一致しませ�
 アプリが 1 件だけなら右側をそのアプリが占め、検索結果なしでは右側は空白になります。空きの幅は検索に影響されません。
 アプリの面積は右側での相対比です。利用可能量には再利用できるスタンバイメモリも含みます。
 専用 RAM 合計と「10 秒差」の表示は、上部の PC 全体の使用量の下にあります。
-初回は OFF。以後は EXE の隣の `MemoryHeatmap.settings.json` に選択を保存します。保存できない場合も現在の切り替えは有効です。
+初回は OFF。以後は EXE の隣の `MemoryHeatmapR.settings.json` に選択を保存します。旧 `MemoryHeatmap.settings.json` が同じ場所にあれば、初回起動時に設定を引き継ぎ、旧ファイルはバックアップとして残します。保存できない場合も現在の切り替えは有効です。
 
 ![空き領域を表示した画面例（架空データ）](images/whole.png)
 
@@ -59,13 +59,15 @@ ZIP 内の `使い方.html` をブラウザーで開くと、画像付きでオ�
 PowerShell で ZIP の SHA-256 を計算し、配布している `.sha256.txt` の値と照合できます。
 
 ```powershell
-Get-FileHash .\MemoryHeatmap-v1.2.6.zip -Algorithm SHA256
+Get-FileHash .\MemoryHeatmapR-v1.2.7.zip -Algorithm SHA256
 ```
 
-ZIP の内容は `MemoryHeatmap.exe` と `使い方.html` です。
+ZIP の内容は `MemoryHeatmapR.exe` と `使い方.html` です。
 GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内リポジトリの文書です。アプリを利用する場合は上記の名前付き ZIP をダウンロードしてください。
 
 ## 更新履歴
+
+- [v1.2.7 — MemoryHeatmapR に改名](release-notes/v1.2.7.md)
 
 - [v1.2.6 — タイトルバーとアプリヘッダーを統合](release-notes/v1.2.6.md)
 
