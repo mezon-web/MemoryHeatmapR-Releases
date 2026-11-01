@@ -3,22 +3,22 @@
 Windows のアプリ別メモリ使用量を、株価マップ風のヒートマップで表示するツールです。
 四角の面積が専用 RAM 使用量、赤・緑の色が約 10 秒前からの増減を示します。
 
-![MemoryHeatmapR の画面例（架空データ）](images/overview.png)
-
 ## ダウンロード
 
 **v1.2.8 / Windows 11 x64**
 
-- [MemoryHeatmapR-v1.2.8.zip](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.8/MemoryHeatmapR-v1.2.8.zip)
+- **[最新版をダウンロード（v1.2.8・Windows x64・ZIP）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.8/MemoryHeatmapR-v1.2.8.zip)**
 - [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.8/MemoryHeatmapR-v1.2.8.zip.sha256.txt)
 - [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.2.8/MemoryHeatmapR-v1.2.8-manual.html)
-- [リリースページ](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/tag/v1.2.8)
+- [更新内容](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/tag/v1.2.8) · [過去バージョン](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
 未導入の場合は [Microsoft の .NET 10 配布ページ](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)から「.NET Desktop Runtime」の Windows x64 を導入してください。
 
 ZIP を展開し、`MemoryHeatmapR-v1.2.8` フォルダ内の `MemoryHeatmapR.exe` をダブルクリックすると起動します。インストール・管理者権限は不要です。
 EXE は単独で移動できます。Windows 11 22H2 の 2023 年 9 月更新以降が対象です。
+
+![MemoryHeatmapR の画面例（架空データ）](images/overview.png)
 
 ## できること
 
@@ -93,3 +93,5 @@ GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内�
 
 - [v1.0.1 — メモリ使用と更新負荷の軽減](release-notes/v1.0.1.md)
 - [v1.0.0 — 初回プレビュー版](release-notes/v1.0.0.md)
+
+<!-- 配布案内の更新手順: 実行用Assetは版番号付きのため、次回リリース公開時にREADMEの版番号・直リンク・展開先名を新しいAssetに合わせて更新する。更新内容・過去バージョンへのリンクを残し、匿名のHEADリクエスト等で直リンクの到達先を確認する。GitHub Actionsは使用しない。 -->
