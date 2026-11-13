@@ -1,21 +1,21 @@
 # MemoryHeatmapR
 
 Windows のアプリ別メモリ使用量を、株価マップ風のヒートマップで表示するツールです。
-四角の面積が専用 RAM 使用量、背景色は最近の増減傾向を示します。
+四角の面積が専用 RAM 使用量、背景色は約10秒前からの実測増減を示します。
 
 ## ダウンロード
 
-**v1.3.0 / Windows 11 x64**
+**v1.3.1 / Windows 11 x64**
 
-- **[最新版をダウンロード（v1.3.0・Windows x64・ZIP）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.3.0/MemoryHeatmapR-v1.3.0.zip)**
-- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.3.0/MemoryHeatmapR-v1.3.0.zip.sha256.txt)
-- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.3.0/MemoryHeatmapR-v1.3.0-manual.html)
-- [更新内容](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/tag/v1.3.0) · [過去バージョン](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases)
+- **[最新版をダウンロード（v1.3.1・Windows x64・ZIP）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.3.1/MemoryHeatmapR-v1.3.1.zip)**
+- [ZIP の SHA-256](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.3.1/MemoryHeatmapR-v1.3.1.zip.sha256.txt)
+- [画像付きの使い方をダウンロード（単一 HTML）](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/download/v1.3.1/MemoryHeatmapR-v1.3.1-manual.html)
+- [更新内容](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases/tag/v1.3.1) · [過去バージョン](https://github.com/mezon-web/MemoryHeatmapR-Releases/releases)
 
 **.NET 10 Desktop Runtime（Windows x64）が必要です。実行環境は同梱していません。**
 未導入の場合は [Microsoft の .NET 10 配布ページ](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)から「.NET Desktop Runtime」の Windows x64 を導入してください。
 
-ZIP を展開し、`MemoryHeatmapR-v1.3.0` フォルダ内の `MemoryHeatmapR.exe` をダブルクリックすると起動します。インストール・管理者権限は不要です。
+ZIP を展開し、`MemoryHeatmapR-v1.3.1` フォルダ内の `MemoryHeatmapR.exe` をダブルクリックすると起動します。インストール・管理者権限は不要です。
 EXE は単独で移動できます。Windows 11 22H2 の 2023 年 9 月更新以降が対象です。
 
 ![MemoryHeatmapR の画面例（架空データ）](images/overview.png)
@@ -24,19 +24,19 @@ EXE は単独で移動できます。Windows 11 22H2 の 2023 年 9 月更新以
 
 - 同じ実行ファイルのフルパスでプロセスを合算し、専用 RAM 使用量の面積比で表示。
 - 約 10 秒前との差を実測値で表示。更新間隔は0.5・1・2・5・10秒から選択。
-- 背景色は半減期5秒でならした最近の増減傾向。短い揺れによる点滅を抑制。
+- 背景色は最新の実測増減を反映。
 - アプリ一覧はアプリ名・専用 RAM・増減の見出しから昇順／降順にソート。
 - アプリ名、PID、パスで検索。選択アプリの PID 別内訳とコミット量を確認。
 - 一時停止／再開、小さい四角のツールチップ、キーボード操作。
 - PC 全体の使用量、利用可能量、使用率を表示。
 - 「空き領域を表示」で左端に現在の利用可能 (空き) を追加。右側のアプリ表示と検索は従来どおり。
-- 上部のタイトルバーにアプリアイコン、計測状態、ウィンドウ操作ボタンをまとめて表示。
+- 上部のタイトルバーにアプリアイコン、計測状態、ウィンドウ操作ボタンをまとめて表示。最大化はウィンドウがあるモニターの作業領域に収まります。
 
 日本語 UI、オフライン動作。四角・アプリ行・PID 行をダブルクリックすると整理の確認画面を開きます。右クリックから対象を確認して、メモリ整理・タスク終了・ファイルの場所を開く操作ができます。自動整理・自動常駐は行いません。
 
 ## 表示の読み方
 
-背景色の赤は増加傾向、緑は減少傾向、暗色は変化が小さい状態または計測中です。色に使う符号付きの増減を半減期5秒でならし、±1 MiBで色を付け、絶対値0.5 MiB未満で暗色へ戻します。小さい傾向は淡く、大きい傾向は濃く表示します。使用量・増減の数値、四角の面積、ソートは実測値です。
+赤は増加、緑は減少、暗色は変化が小さい状態または計測中です。背景色は約10秒前からの実測増減をそのまま反映し、1 MiB未満は暗色です。使用量・増減の数値、四角の面積、ソートも実測値を使います。
 起動・再開・更新間隔変更後は約 10 秒分の履歴を集めます。マップの初回配置は使用量順で、その後は既存アプリの配置順を維持します。一覧のソートでマップの配置順は変わりません。
 
 空き領域 OFF の面積は、表示中に取得できたアプリのプライベートワーキングセットを基準にします。
@@ -61,13 +61,16 @@ ZIP 内の `使い方.html` をブラウザーで開くと、画像付きでオ�
 PowerShell で ZIP の SHA-256 を計算し、配布している `.sha256.txt` の値と照合できます。
 
 ```powershell
-Get-FileHash .\MemoryHeatmapR-v1.3.0.zip -Algorithm SHA256
+Get-FileHash .\MemoryHeatmapR-v1.3.1.zip -Algorithm SHA256
 ```
 
 ZIP の内容は `MemoryHeatmapR.exe` と `使い方.html` です。
 GitHub が自動表示する **Source code (zip / tar.gz)** は、この案内リポジトリの文書です。アプリを利用する場合は上記の名前付き ZIP をダウンロードしてください。
 
 ## 更新履歴
+
+- [v1.3.1 — 配色の復元と最大化の修正](release-notes/v1.3.1.md)
+
 
 - [v1.3.0 — 操作・表示の改善](release-notes/v1.3.0.md)
 
